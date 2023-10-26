@@ -75,10 +75,12 @@ export function navbar () {
 
 navbar ()
 
-// map and displays cat
+// map and display cat
 
 document.getElementById('category').innerHTML = getJson.map((item)=> `
  <option id="category">${item}</option>`)
+
+ //display avatar section
 
 const container2 = document.querySelector(".container2")
  export function avatarSection () {
@@ -96,6 +98,63 @@ const container2 = document.querySelector(".container2")
 }
 
 avatarSection ()
+
+//display buttons section
+const container3 = document.querySelector('.container3')
+
+export function buttons () {
+  return container3.innerHTML = `        <div class="dropdown-buttons">
+  <div class="price">
+  <button class="dropdownn"><select id="headers"><option id="headers"> HeadePhone-type</option></select></button>
+  <button class="dropdown"><select id="headers"><option id="headers">Price</option></select></button>
+  <button class="dropdown"><select id="headers"><option id="headers">Review</option></select></button>
+  <button class="dropdown"><select id="headers"><option id="headers">Color</option></select></button>
+  <button class="dropdown"><select id="headers"><option id="headers">Material</option></select></button>
+  <button class="dropdown"><select id="headers"><option id="headers">Offer</option></select></button>
+</div>
+
+<div class="headphone-type">
+  <button class="dropdownn"><select id="headers"><option id="header"> HeadePhone-type</option></select></button>
+</div>
+</div>`
+}
+
+buttons ()
+
+const container4 = document.querySelector('.container4')
+
+export function displayCards () {
+ return  container4.innerHTML = `     <div class="top">
+  <div class="subcard">
+  <img
+    src="https://images.unsplash.com/photo-1541014741259-de529411b96a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZlZ2FuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60">
+    <i class="fa-regular fa-heart"></i>
+   </div>
+
+   <div class="snikersprice">
+    <span id="snykers">XY-Snikers</span>
+    <span id="snykers-price">$ -XY-Snikers</span>
+   </div>
+
+   <div class="shoes-available">
+    <p id="shoes"> 5 types of shoes available</p>
+   </div>
+  <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <p id="number">(121)</p>
+  </div>          
+  <div class="date">
+    <button id="addtocard">Add to Card</button>
+    <button id="shortlist">Short List</button>
+  </div>
+</div>`
+}
+
+displayCards ()
 
 
 document.querySelector('#app').innerHTML 
