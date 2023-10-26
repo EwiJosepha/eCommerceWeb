@@ -365,6 +365,7 @@ button:focus-visible {
  }
 
  .snikersprice {
+  padding: 10px;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -372,6 +373,7 @@ button:focus-visible {
  }
 
  #snykers-price {
+  padding: 10px;
   font-size: 15px;
   font-weight: 700;
  }
@@ -383,17 +385,19 @@ button:focus-visible {
  .top {
   width: 100%;
   background-color: fff;
+  border: 1px solid #6a6666;
+  border-radius: 6px;
   /* gap: 10px; */
  }
 
 .stars {
-
    display: flex;
    align-items: center;
    justify-content: center;
  }
 
  .date {
+  padding: 10px;
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -411,6 +415,9 @@ button:focus-visible {
   padding: 5px;
   color: #303e6f;
   border-radius: 40px;
+}
 
- }
+#shoes {
+  padding: 10px;
+}
 

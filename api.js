@@ -7,4 +7,14 @@ export async function allCategories() {
   console.log(jasondata);
 }
 
+export async function displayallproducts () {
+  const products = "https://dummyjson.com/products"
+  const productdata = await fetch(products)
+  const data = await productdata.json()
+  const targetProduct = data.products
+  console.log(targetProduct);
+}
+
+displayallproducts ()
+
 

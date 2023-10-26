@@ -2,7 +2,7 @@
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './counter.js'
-import { allCategories} from "./api.js"
+import { allCategories, displayallproducts} from "./api.js"
 
 
 //<div>
@@ -24,6 +24,7 @@ import { allCategories} from "./api.js"
 //landing page ui
 
 const  getJson = await allCategories()
+const productrender = await displayallproducts()
 
 console.log("Json Data",getJson)
 
@@ -124,11 +125,9 @@ buttons ()
 const container4 = document.querySelector('.container4')
 
 export function displayCards () {
- return  container4.innerHTML = `     <div class="top">
+ container4.innerHTML = `<div class="top">
   <div class="subcard">
-  <img
-    src="https://images.unsplash.com/photo-1541014741259-de529411b96a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZlZ2FuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60">
-    <i class="fa-regular fa-heart"></i>
+ 
    </div>
 
    <div class="snikersprice">
@@ -153,6 +152,12 @@ export function displayCards () {
   </div>
 </div>`
 }
+
+const subcard = document.querySelector(".subcard").innerHTML = productrender.map((item)=>{
+  `<img
+  ${item.thumbnail}>
+  <i class="fa-regular fa-heart"></i>`
+})
 
 displayCards ()
 
