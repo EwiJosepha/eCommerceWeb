@@ -308,6 +308,7 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
+
  }
 
  .dropdown-buttons {
@@ -346,8 +347,9 @@ button:focus-visible {
  }
 
  .subcard {
-  /* width: 33.3%; */
+  gap: 30px;
   position: relative;
+
  }
 
 
@@ -387,8 +389,7 @@ button:focus-visible {
   background-color: fff;
   border: 1px solid #6a6666;
   border-radius: 6px;
-  /* gap: 10px; */
- }
+}
 
 .stars {
    display: flex;

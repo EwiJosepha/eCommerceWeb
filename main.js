@@ -2,7 +2,7 @@
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './counter.js'
-import { allCategories, displayallproducts} from "./api.js"
+import {  displayallproducts, allCategories ,} from "./api.js"
 
 
 //<div>
@@ -27,6 +27,8 @@ const  getJson = await allCategories()
 const productrender = await displayallproducts()
 
 console.log("Json Data",getJson)
+
+console.log({productrender});
 
 
 
@@ -104,7 +106,7 @@ avatarSection ()
 const container3 = document.querySelector('.container3')
 
 export function buttons () {
-  return container3.innerHTML = `        <div class="dropdown-buttons">
+  return container3.innerHTML = ` <div class="dropdown-buttons">
   <div class="price">
   <button class="dropdownn"><select id="headers"><option id="headers"> HeadePhone-type</option></select></button>
   <button class="dropdown"><select id="headers"><option id="headers">Price</option></select></button>
@@ -125,9 +127,14 @@ buttons ()
 const container4 = document.querySelector('.container4')
 
 export function displayCards () {
- container4.innerHTML = `<div class="top">
-  <div class="subcard">
- 
+  
+ const top = document.querySelector(".container4")
+ productrender.forEach((item)=>{
+  top.innerHTML +=
+   `<div class="top">
+  <div class="subcard" id="subcards">
+  <img src="${item.thumbnail}">
+  <i class="fa-regular fa-heart"></i>
    </div>
 
    <div class="snikersprice">
@@ -150,18 +157,23 @@ export function displayCards () {
     <button id="addtocard">Add to Card</button>
     <button id="shortlist">Short List</button>
   </div>
-</div>`
-}
+  <div class="subcard" id="subcards">
+  <img src="">
+  <i class="fa-regular fa-heart"></i>
+   </div>
 
-const subcard = document.querySelector(".subcard").innerHTML = productrender.map((item)=>{
-  `<img
-  ${item.thumbnail}>
-  <i class="fa-regular fa-heart"></i>`
+</div>
+ 
+  `
 })
+
+
+}
 
 displayCards ()
 
 
+// const subcard =document.querySelector('.subcard')
 document.querySelector('#app').innerHTML 
 
 
