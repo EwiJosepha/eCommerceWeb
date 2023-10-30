@@ -83,31 +83,9 @@
            
           
             <form>
-              <div class="size-select">
-                <p>Size</p>
-                <label for="small">
-                  <input type="radio" name="size" id="small">
-                  <span>S</span>
-                </label>
-                <label for="meduim">
-                  <input type="radio" name="size" id="meduim">
-                  <span>M</span>
-                </label>
-                <label for="large">
-                  <input type="radio" name="size" id="large">
-                  <span>L</span>
-                </label>
-                <label for="x-large">
-                  <input type="radio" name="size" id="x-large">
-                  <span>XL</span>
-                </label>
-                <label for="xx-Large">
-                  <input type="radio" name="size" id="xx-large">
-                  <span>XXL</span>
-                </label>
-              </div>
+              <p id=choosecolor>Color a Color</p> 
               <div class="color-select">
-                <p>Color</p>
+               
                 <label for="red">
                   <input type="radio" name="red" id="red">
                   <span class="color-1"></span>
@@ -125,12 +103,50 @@
                   <span class="color-4"></span>
                 </label>
               </div>
+              <hr>
+              <p id="choose-sice">Choose Size</p>
+              <div class="size-select">
+                
+                <label for="small">
+                  <span id="round" class="color-4"></span>
+                  <input type="radio" name="size" id="small">
+                  <span>Small</span>
+                </label>
+                <label for="meduim">
+                  <span class="color-3" id="round"></span>
+
+                  <input type="radio" name="size" id="meduim">
+                  <span>Meduim</span>
+                </label>
+                <label for="large">
+                  <span class="color-2" id="round"></span>
+
+                  <input type="radio" name="size" id="large">
+                  <span>Large</span>
+                </label>
+                <label for="x-large">
+                  <span id="round" class="color-1"></span>
+
+                  <input type="radio" name="size" id="x-large">
+                  <span>XLarge</span>
+                </label>
+                <label for="xx-Large">
+                  <span class="color-2" id="round"></span>
+
+                  <input type="radio" name="size" id="xx-large">
+                  <span>XXL</span>
+                </label>
+              </div>
+              <hr>
+         
     
               <div class="quantity-select">
-                <p>Quantity</p>
-                <input type="number" value="1">
+                <button id="add">+</button>
+                <p id="display">5</p>
+                <button id="subtract">-</button>
+                <!-- <input type="number" value="1"> -->
               </div>
-              <button>Buy Now</button>
+              <button id="buttonn">Buy Now</button>
             </form>
           </div>
         </div>

@@ -255,6 +255,10 @@
   gap: 10px;
  }
 
+ form {
+  padding-top: 20px;
+ }
+
  .review {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -295,9 +299,15 @@
  }
 
  .size-select {
+  padding-bottom: 30px;
   display: flex;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
+ }
+
+ #choose-sice {
+  padding-top: 20px;
+
  }
 
  .size-select p {
@@ -331,24 +341,36 @@
 
  .color-select span {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
   margin-right: 15px;
   cursor: pointer;
  }
 
  .color-1 {
-  background-color: red;
+  border-radius: 50%;
+  background-color:
+  #ECDECC;
  }
  .color-2 {
-  background-color: yellow;
+  border-radius: 50%;
+  background-color: #BBD278;
  }
  .color-3 {
-  background-color: green;
+  border-radius: 50%;
+  background-color: 
+  #BBC1F8;
  }
  .color-4 {
-  background-color:  blue;
+  border-radius: 50%;
+  background-color:  #FFD3F8;
+ }
+
+ #round {
+  padding: 10px;
+  width: 15px;
+  /* height: 3px; */
  }
 
  .color-select input {
@@ -366,8 +388,23 @@
   margin-top: 20px;
  }
 
- .quantity-select p{
+ .quantity-select{
+  border: 1px solid #000;
+  border-radius: 19px;
   width: 75px;
+  background-color: #fdfbfb;
+  /* height: 75px; */
+ }
+
+ #add,
+ #subtract
+ {
+  border: none;
+  padding: 10px;
+ }
+
+ #display {
+  padding: 5px;
  }
 
  .quantity-select input {
@@ -379,7 +416,7 @@
   border-radius: 12px;
 }
 
-button {
+#buttonn {
   background: #553ff0;
   color: #fff;
   font-size: 17px;
