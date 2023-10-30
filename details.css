@@ -389,22 +389,36 @@
  }
 
  .quantity-select{
-  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  border: 1px solid #f1ecec;
   border-radius: 19px;
-  width: 75px;
-  background-color: #fdfbfb;
-  /* height: 75px; */
+  width: 20%;
+  background-color: #f1ecec;
+  height: 35px;
  }
 
+.addition {
+  display: flex;
+}
  #add,
  #subtract
  {
+  border-radius: 19px;
   border: none;
   padding: 10px;
  }
 
+ .cardadd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
  #display {
   padding: 5px;
+  color: #303e6f;
  }
 
  .quantity-select input {
@@ -420,13 +434,13 @@
   background: #553ff0;
   color: #fff;
   font-size: 17px;
-  width: 80%;
+  width: 150px;
+  height: 35px;
   padding: 10px;
   border-radius: 30px;
   border: 0;
   outline: 0;
-  margin-top: 40px;
-  box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+  box-shadow: 0 10px 10px #553ff040;
   cursor: pointer;
 }
 
@@ -441,11 +455,34 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background:  rgba(0,0,0,0.1);
+  background:  rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .btn-active {
   background-color: #553ff0;
 }
+
+.delivery {
+  display: flex;
+  padding-top: 30px;
+  gap: 30px;
+  border: 2px solid #b3adad;
+}
+
+.deliverybasket{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 10px;
+}
+
+.deliverycar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 10px;
+  padding-bottom: 30px;
+}
+
 
