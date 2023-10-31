@@ -11,13 +11,11 @@ CreateNavbar("details");
 //  <option id="category">${item}</option>`
 // );
 
-// const locationn= window.location.search
-// const locationstring = new URLSearchParams(locationn)
-// console.log(locationstring);
-// let value = urlParams.get()
-// console.log(value);
+let params = new URLSearchParams(document.location.search);
+let id = params.get("id"); // is the string "Jonathan"
+console.log(id) // 
 
-let singleproduc = await displaysingleproduct('9')
+let singleproduc = await displaysingleproduct(id)
 console.log(singleproduc);
 
 
@@ -33,6 +31,11 @@ export async function displayCards(singleItem) {
      
       <a href="./details.html?=${singleItem.id}">
       <img src=${singleItem.thumbnail} id="details-page"/>
+      <img src="${singleItem.images[0]}" id="details-page"/>
+      <img src="${singleItem.images[1]}" id="details-page"/>
+      <img src="${singleItem.images[2]}" id="details-page"/>
+      <img src="${singleItem.images[3]}" id="details-page"/>
+
       </div>
       </a>
     </div> 
@@ -56,8 +59,7 @@ export async function displayproductt() {
     <div class="top">
     
       <div class="subcard" id="subcards">
-        <img src="/images/jane.jpg" id="details-page"/>
-        <img src="/images/jane.jpg" id="details-page"/>
+        <img src="${item.thumbnail}" id="details-page"/>
           <i class="fa-regular fa-heart"></i>
           </div>
           <div class="prev-next">

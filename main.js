@@ -117,7 +117,7 @@ async function displayCards(fetchData) {
     
       <div class="subcard" id="subcards">
      
-      <a href="./pages/details/details.html?=${item.id}">
+      <a href="./pages/details/details.html?id=${item.id}">
       <img src=${item.thumbnail} id="details-page"/>
       <i class="fa-regular fa-heart"></i>
       </div>

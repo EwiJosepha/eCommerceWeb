@@ -507,7 +507,7 @@ h4 {
 
 .subcard {
   display: flex;
-  width: 80%;
+  width: 30%;
   gap: 30px;
   position: relative;
   border-radius: 10px;
@@ -528,6 +528,12 @@ h4 {
   margin-left: -50px;
  }
 
+
+ .container4 {
+  display: flex;
+  gap: 10px;
+ }
+ 
  .prev-next {
   display: flex;
   align-items: center;
