@@ -1,6 +1,10 @@
-import { displayallproducts, allCategories, categorydisplay } from "./api.js";
+import { displayallproducts, allCategories, categorydisplay, displaysingleproduct } from "./services/api.js";
+import CreateNavbar from "./components/navbar.js";
+
+CreateNavbar(); // create the navbar
 
 const getJson = await allCategories();
+
 let productrender = [];
 
 displayallproducts()
@@ -14,49 +18,8 @@ console.log("Json Data", getJson);
 
 console.log({ productrender });
 
-const container1 = document.querySelector(".container1");
 // const category = document.getElementById('category')
 
-export function navbar() {
-  container1.innerHTML = ` <div class="title">
-  <h1 id="fashionhub"><i>FashionHub</i></h1>
-  <div class="navlinks">
-    <span><select id="category">
-    <option>shoes</option>
-    <option>bags</option>
-    <option>hats</option>
-
-
-    </select></span>
-    <span id="brand">Brand</span>
-   <a href="./contact.html" id="contactdisplay"><span id="contact">Contact</span><a/>
-    <span id="faq">FAQ's</span>
-  </div>
-</div>
-
-<div class="basket">
-  <button id="basketimg">
-    <span id="items-selected">3</span>
-    <i class="fa-solid fa-bag-shopping"></i>
-  </button>
-  <button id="bell">
-    <span id="bells"></span>
-    <i class="fa-regular fa-bell"></i>
-  </button>
-  <div class="title-image">
-    <img src="https://media.istockphoto.com/id/1253920275/fr/photo/femme-avec-le-b%C3%A9b%C3%A9-nouveau-n%C3%A9.webp?b=1&s=170667a&w=0&k=20&c=zIRObcgZ_XtXXZqWlRk_VptXdvd00YiX_vHEH7lwkqg=">
-    <div class="name">
-      <span id="gmorning">Good morning</span>
-      <span id="johnson">Scarlet Johnson</span>
-    </div>
-  </div>
-</div>
-
-`;
-  // allCategories (category)
-}
-
-navbar();
 
 // map and display cat
 let category = document.getElementById("category");
@@ -91,9 +54,10 @@ if (selectedCategory !== "") {
 
 //display avatar section
 
-const container2 = document.querySelector(".container2");
 export function avatarSection() {
-  return (container2.innerHTML = ` <div class="buy-now-section">
+  const container2 = document.querySelector(".container2");
+
+  if (container2) container2.innerHTML = ` <div class="buy-now-section">
   <div class="grap-50">
     <h1 id="headphone">Grap up to 50% off on Selected Headphone</h1>
 
@@ -104,16 +68,17 @@ export function avatarSection() {
   <div class="avatar">
   <img src="/images/My project 1.png" id="img">
 </div>
-</div>`);
+</div>`;
 }
 
 avatarSection();
 
 //display buttons section
-const container3 = document.querySelector(".container3");
 
 export function buttons() {
-  return (container3.innerHTML = ` <div class="dropdown-buttons">
+  const container3 = document.querySelector(".container3");
+
+  if (container3) container3.innerHTML = ` <div class="dropdown-buttons">
   <div class="price">
  <select id="headers"><option id="headers"> HeadePhone-type</option></select>
   <select id="headers"><option id="headers">Price</option></select>
@@ -126,7 +91,7 @@ export function buttons() {
 <div class="headphone-type">
 <select id="headerss"><option id="headers"> HeadePhone-type</option></select>
 </div>
-</div>`);
+</div>`;
 }
 
 buttons();
@@ -135,7 +100,7 @@ buttons();
 
 // const container4 = document.querySelector('.container4')
 
-export function displayCards(fetchData) {
+async function displayCards(fetchData) {
   const top = document.querySelector(".container4");
   top.innerHTML = "";
 
@@ -146,13 +111,13 @@ export function displayCards(fetchData) {
     // const img = document.createElement('img')
     // img.src = `${item.thumbnail}`
     // subcard.appendChild(img)
-  
+
 
     top.innerHTML += `<div class="top">
     
       <div class="subcard" id="subcards">
      
-      <a href="./details.html">
+      <a href="./pages/details/details.html?=${item.id}">
       <img src=${item.thumbnail} id="details-page"/>
       <i class="fa-regular fa-heart"></i>
       </div>
@@ -179,25 +144,19 @@ export function displayCards(fetchData) {
         <button id="addtocard">Add to Card</button>
         <button id="shortlist">Short List</button>
       </div>
-
-
-    </div>
-   
- 
-  `;
-
- });
-
-  
+    </div> 
+  `
+  });
 }
 
 
 
 
 
-const container5 = document.querySelector(".container5");
 export function previews() {
-  container5.innerHTML = `<div class="previews">
+  const container5 = document.querySelector(".container5");
+
+  if (container5) container5.innerHTML = `<div class="previews">
   <button id="previews">Preview</button>
   <button id="previews">1</button>
   <button id="previews">2</button>
@@ -212,10 +171,12 @@ export function previews() {
 
 previews();
 
-const container6 = document.querySelector(".container6");
+
 
 export function footer() {
-  container6.innerHTML = `<div class="footer">
+  const container6 = document.querySelector(".container6");
+
+  if (container6) container6.innerHTML = `<div class="footer">
   <h2 id="footer">Footer</h2>
 </div>`;
 }

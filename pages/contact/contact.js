@@ -1,11 +1,6 @@
-import {navbar} from "./main.js"
-const container1 = document.getElementById('container1')
+import CreateNavbar from "../../components/navbar.js";
 
-function navcontact () {
-  container1.innerHTML = navbar()
-}
-
-navcontact ()
+CreateNavbar("contact");
 
 
 // const dat = document.getElementById('dat')
