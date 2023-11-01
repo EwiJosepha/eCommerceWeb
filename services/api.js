@@ -31,6 +31,18 @@ export async function displayallproducts () {
   // const targetProduct = data.products
 }
 
+export async function displayallproductsdata () {
+  const products = "https://dummyjson.com/products?limit=0&skip=0"
+  const productdata = await fetch(products)
+  const data = await productdata.json()
+  console.log(data);
+  const targetdata = data.products
+  console.log( targetdata);
+
+  return  data
+  // const targetProduct = data.products
+}
+
 export async function displaysingleproduct (singlepro) {
   const singleprod = `https://dummyjson.com/products/${singlepro}`
   const singledata = await fetch(singleprod);

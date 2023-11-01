@@ -133,11 +133,11 @@ buttons();
         <p id="shoes"> 5 types of shoes available</p>
       </div>
       <div class="stars">
-      <img src="images/Star.png">
-      <img src="images/Star.png">
-      <img src="images/Star.png">
-      <img src="images/Star.png">
-      <img src="images/Star (1).png">
+      <i class="fa-regular fa-star" id="star"></i>
+      <i class="fa-regular fa-star" id="star""></i>
+      <i class="fa-regular fa-star" id="star"></i>
+      <i class="fa-regular fa-star" id="star"></i>
+    
         <p id="number">(121)</p>
       </div>          
       <div class="date">

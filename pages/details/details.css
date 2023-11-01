@@ -83,6 +83,11 @@
   color: #ffa500;
 }
 
+#star {
+  color: #ffa500;
+  padding: 5px;
+}
+
 #bells {
   position: absolute;
   margin-bottom: 39px;
@@ -104,7 +109,7 @@
 }
 
 .stars{
- display: flex;
+ /* display: flex; */
  gap: 5px;
 }
 
@@ -583,5 +588,98 @@ h4 {
  .water {
   display: flex;
  }
+
+ .containersecond{
+  width: 100%;
+  background-color: fff;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+ }
+
+ .topp {
+    width: 100%;
+    background-color: fff;
+    border: 1px solid #6a6666;
+    border-radius: 6px;
+}
+
+ .subcardd {
+  gap: 30px;
+  position: relative;
+ }
+
+ .subcardd img {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.subcard .fa-regular {
+  padding-top: 20px;
+  position: absolute;
+  margin-left: -50px;
+ }
+
+ #snykers-price {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#snykers {
+  color: #d6cfcf;
+  font-size: 15px;
+ }
+
+ .date {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  gap: 8px;
+ }
+
+ 
+ #addtocard {
+  padding: 2px;
+  color: #fff;
+  background-color: #303e6f;
+  border: none;
+  border-radius: 40px;
+ }
+
+ #shortlist {
+  padding: 2px;
+  color: #303e6f;
+  border-radius: 40px;
+  border: none;
+}
+
+#number {
+  color: #6a6666;
+}
+
+#shoes {
+  padding: 5px;
+ color: #d6cfcf;
+}
+
+ .snikerspricee {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: #303e6f;
+  justify-content: space-between;
+}
+
+.stars{
+  display: flex;
+  width: 30%;
+  gap: 5px;
+ }
+
 
 
