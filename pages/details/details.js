@@ -24,10 +24,11 @@ console.log("single product", singleproduc);
 
 let similarities = await displayallproductsdata()
   .then(({ products }) => products.filter(obj => obj.category === singleproduc.category));
-const cat = similarities[0].products
+  console.log(similarities);
+// const cat = similarities[0].products
 
-console.log({ similarities });
-console.log(cat);
+console.log( similarities );
+// console.log(cat);
 // console.log(c);
 
 
@@ -194,7 +195,7 @@ productmoredetaills()
 
 
 let semi = singleproduc
-async function similaprod(semi) {
+async function similaprod(semii) {
 
   const similarproducts = document.querySelector(".containersecond")
   console.log(similarproducts);
@@ -210,21 +211,51 @@ async function similaprod(semi) {
   // console.clear()
   // console.log("similarItems", similarItems)
 
-  if (semi.category !== similarities) {
-    console.log(similarities.category);
+  
+ 
     similarproducts.innerHTML = `<div class="topp">
   
     <div class="subcardd" id="subcardss">
+    
    
-    <a href="./pages/details/details.html?id=${semi.id}">
-    <img src=${semi.thumbnail} id="detailss-page"/>
+    <a href="./pages/details/details.html?id=${semii.id}">
+    <img src=${semii.thumbnail} id="detailss-page"/>
     <i class="fa-regular fa-heart"></i>
     </div>
     </a>
 
     <div class="snikerspricee">
-      <span id="snykers">${semi.title}</span>
-      <span id="snykers-price">$${semi.price}</span>
+      <span id="snykers">${semii.title}</span>
+      <span id="snykers-price">$${semii.price}</span>
+    </div>
+   
+
+    <div class="shoes-available">
+      <p id="shoes"> 5 types of shoes available</p>
+    </div>
+    <div class="stars">
+    <i class="fa-regular fa-star" id="star"></i>
+    <i class="fa-regular fa-star" id="star"></i>
+    <i class="fa-regular fa-star" id="star"></i>
+    <i class="fa-regular fa-star" id="star"></i>
+      <p id="number">(121)</p>
+    </div>          
+    <div class="date">
+      <button id="addtocard">Add to Card</button>
+      <button id="shortlist">Short List</button>
+    </div>
+    <div class="subcardd" id="subcardss">
+    
+   
+    <a href="./pages/details/details.html?id=${semii.id}">
+    <img src=${semii.thumbnail} id="detailss-page"/>
+    <i class="fa-regular fa-heart"></i>
+    </div>
+    </a>
+
+    <div class="snikerspricee">
+      <span id="snykers">${semii.title}</span>
+      <span id="snykers-price">$${semii.price}</span>
     </div>
    
 
@@ -244,15 +275,20 @@ async function similaprod(semi) {
     </div>
   </div> 
 `
-  }
-
-  console.log(similarproducts);
-
-
 
 }
 
-similaprod(semi)
+similaprod(similarities[0])
+similaprod (typeof similarities[1])
+
+// const simalrindex1 = similaprod(similarities[1])
+// const simalrindex2 = similaprod(similarities[2])
+// similaprod(similarities[3])
+// console.log(typeof similarities)
+//  const seconddval = await similaprod(similarities[1])
+//  console.log(seconddval);
+// similaprod(similarities[2])
+// similaprod(similarities[3])
 
 
 
