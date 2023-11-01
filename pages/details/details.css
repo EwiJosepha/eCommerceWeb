@@ -18,6 +18,11 @@
   padding-top: 30px;
 }
 
+.container3 {
+  /* height: 200px; */
+  padding-top: 40px;
+}
+
 .title {
   display: flex;
   /* justify-content: center; */
@@ -170,7 +175,7 @@
   /* box-shadow: -10px 5px 10px 10px rgba(0,0,0,0.1); */
   position: relative;
   padding-bottom: 30px;
-  height: 500px;
+  /* height: 500px; */
 }
 
  img {
@@ -188,7 +193,7 @@
   font-size: 13px;
   font-weight: 500;
   color: #777;
-  height: 500px;
+  /* height: 500px; */
 
  }
 
@@ -496,6 +501,7 @@ h4 {
 }
 
 .top {
+  display: flex;
   margin-top: 20px;
   padding-top: 20px;
   padding: 10px;
@@ -507,7 +513,7 @@ h4 {
 
 .subcard {
   display: flex;
-  width: 30%;
+  width: 100%;
   gap: 30px;
   position: relative;
   border-radius: 10px;
@@ -530,20 +536,52 @@ h4 {
 
 
  .container4 {
-  display: flex;
-  gap: 10px;
+  width: 100%;
+  gap: 30px;
+  position: relative;
+  border-radius: 10px;
  }
- 
+
  .prev-next {
   display: flex;
   align-items: center;
   justify-content: space-between;
  }
 
+
+
  #prev,
  #next {
   font-size: 25px;
 
+ }
+
+ #prod-description {
+  color: #303e6f;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 3;
+ }
+
+
+ #space {
+  line-height: 3;
+ }
+
+ .checked {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  color: red;
+  border:  1px solid blue;
+ }
+
+ .fa-circle-check {
+  line-height: 3;
+ }
+
+ .water {
+  display: flex;
  }
 
 

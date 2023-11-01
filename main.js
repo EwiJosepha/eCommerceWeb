@@ -100,9 +100,9 @@ buttons();
 
 // const container4 = document.querySelector('.container4')
 
-async function displayCards(fetchData) {
-  const top = document.querySelector(".container4");
-  top.innerHTML = "";
+ export async function displayCards(fetchData) {
+ const top = document.querySelector(".containerthumb");
+ if(top) top.innerHTML = "";
 
   fetchData?.forEach((item) => {
     const arrImages = item.images;
@@ -113,7 +113,7 @@ async function displayCards(fetchData) {
     // subcard.appendChild(img)
 
 
-    top.innerHTML += `<div class="top">
+    if(top) top.innerHTML += `<div class="top">
     
       <div class="subcard" id="subcards">
      
