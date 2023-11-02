@@ -413,7 +413,7 @@ button:focus-visible {
 }
 
  #addtocard {
-  padding: 2px;
+  padding: 6px;
   color: #fff;
   background-color: #303e6f;
   border: none;
@@ -421,7 +421,7 @@ button:focus-visible {
  }
 
  #shortlist {
-  padding: 2px;
+  padding: 6px;
   color: #303e6f;
   border-radius: 40px;
   border: none;

@@ -29,7 +29,7 @@ export default function CreateNavbar(current_page = "main") {
 <div class="basket">
   <button id="basketimg">
     <span id="items-selected">3</span>
-    <i class="fa-solid fa-bag-shopping"></i>
+   <a href="http:${base_url}viewcards/cards.html"> <i class="fa-solid fa-bag-shopping" id="navto-nextp"></i></a>
   </button>
   <button id="bell">
     <span id="bells"></span>

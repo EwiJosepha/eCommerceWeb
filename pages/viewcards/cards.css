@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+#app {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'inter', sans-serif;
+}
+
+.container1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.container3 {
+  /* height: 200px; */
+  padding-top: 40px;
+}
+
+.title {
+  display: flex;
+  /* justify-content: center; */
+  gap: 30px;
+  width: 65%;
+}
+
+.navlinks {
+  /* font-family: sans-serif; */
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #303e6f;
+}
+
+
+.basket {
+  width: 34%;
+  display: flex;
+  height: 90px;
+  gap: 40px;
+}
+
+#fashionhub {
+  /* font-family: sans-serif; */
+  font-weight: 600;
+  color: #303e6f;
+}
+
+#basketimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#bell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.fa-regular {
+  position: relative;
+
+}
+
+.fa-solid {
+  position: relative;
+  color: #ffa500;
+}
+
+#star {
+  color: #ffa500;
+  padding: 5px;
+}
+
+#bells {
+  position: absolute;
+  margin-bottom: 39px;
+  margin-right: -9px;
+  padding: 5px;
+  background-color: #f2cd88;
+  border-radius: 50%;
+}
+
+#items-selected {
+  position: absolute;
+  margin-right: -9px;
+  margin-bottom: 35px;
+  padding: 3px;
+  color: #fff;
+  background-color: #303e6f;
+  border-radius: 50%;
+
+}
+
+.stars{
+ /* display: flex; */
+ gap: 5px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-image {
+  display: flex;
+  width: 26%;
+  height: 40px;
+  gap: 8px;
+}
+
+.title-image img {
+  width: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#gmorning, #johnson {
+  padding: 3px;
+  font-size: 8px;
+}
+
+#johnson {
+  color: #303e6f;
+  background-color: #f4e8f3;
+}
+
+#gmorning {
+  color: #776e6e;
+}
+
+.container2{
+  width: 100%;
+  background-color: fff;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+ }
+
+
+.top {
+  width: 100%;
+  background-color: fff;
+  border: 1px solid #6a6666;
+  border-radius: 6px;
+}
+
+.subcard {
+  gap: 30px;
+  position: relative;
+}
+
+
+.subcard img {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+ .subcard .fa-regular {
+  padding-top: 20px;
+  position: absolute;
+  margin-left: -50px;
+ }
+
+ #number {
+  color: #6a6666;
+}
+
+#shoes {
+  padding: 5px;
+ color: #d6cfcf;
+}
+
+ .snikerspricee {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: #303e6f;
+  justify-content: space-between;
+}
+
+#snykers {
+  color: #d6cfcf;
+  font-size: 15px;
+ }
+
+.stars{
+  display: flex;
+  width: 30%;
+  gap: 5px;
+ }
+
+ .date {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  gap: 8px;
+ }
+
+ 
+ #addtocard {
+  padding: 6px;
+  color: #fff;
+  background-color: #303e6f;
+  border: none;
+  border-radius: 40px;
+ }
+
+ #shortlist {
+  padding: 6px;
+  color: #303e6f;
+  border-radius: 40px;
+  border: none;
+}
+
+#number {
+  color: #6a6666;
+}
+
+#shoes {
+  padding: 5px;
+ color: #d6cfcf;
+}
