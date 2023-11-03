@@ -1,5 +1,8 @@
 import CreateNavbar from "../../components/navbar.js";
-
+const yourname = document.getElementById("yourname")
+const youremail = document.getElementById("youremail")
+const yournumber = document.getElementById("yournumber")
+const brand = document.getElementById("brand")
 CreateNavbar("contact");
 
 

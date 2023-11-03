@@ -247,7 +247,7 @@ addtocard.addEventListener("click", (e) => {
   e.preventDefault();
  let addedProduts = JSON.parse(localStorage.getItem("addedcards")) || []
     addedProduts.push(singleproduc)
-    addedProduts.find((item)=> item !== singleproduc)
+  
     console.log(addedProduts);
 
   localStorage.setItem("addedcards",JSON.stringify(addedProduts))

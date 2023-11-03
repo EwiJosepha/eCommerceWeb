@@ -21,7 +21,7 @@ export default function CreateNavbar(current_page = "main") {
 
     </select></span>
     <span id="brand">Brand</span>
-   <a href="${base_url}contact/contact.html" id="contactdisplay"><span id="contact">Contact</span><a/>
+   <a href="${base_url}contact/contact.html" id="contactdisplay"><span class="contactt">Contact</span><a/>
     <span id="faq">FAQ's</span>
   </div>
 </div>

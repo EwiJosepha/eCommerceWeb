@@ -9,8 +9,11 @@ const container2 = document.querySelector(".container2")
 const addedcards = JSON.parse(localStorage.getItem('addedcards'))
 
 function displaycardsadded (value) {
-
-  value.forEach((item)=>{
+  if(container2) container2.innerHTML = ""
+  value?.forEach((item)=>{
+    // const arrimages = item.images
+    // console.log(arrimages);
+ 
     container2.innerHTML += `<div class="top">
   
     <div class="subcard" id="subcards">

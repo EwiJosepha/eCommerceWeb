@@ -148,6 +148,7 @@
 }
 
 .container2{
+  padding-top: 50px;
   width: 100%;
   background-color: fff;
   gap: 30px;
@@ -242,4 +243,9 @@
 #shoes {
   padding: 5px;
  color: #d6cfcf;
+}
+
+#txtcenter {
+  text-align: center;
+  padding-top: 30px;
 }
