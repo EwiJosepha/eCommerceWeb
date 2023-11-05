@@ -10,10 +10,10 @@ body {
 }
 
 #ap {
-  border: 1px solid #3131ff;
   padding-left: 20px;
   padding-right: 20px;
   font-family: 'inter', sans-serif;
+  padding-bottom: 20px;
 }
 
 #contact {
@@ -32,21 +32,17 @@ body {
   background-color:  #fbf7fa;
 }
 
-
-
 #category {
   display: none;
 }
 
 .title {
   display: flex;
-  /* justify-content: center; */
   gap: 30px;
   width: 65%;
 }
 
 .navlinks {
-  /* font-family: sans-serif; */
   padding-top: 10px;
   display: flex;
   justify-content: center;
@@ -54,12 +50,15 @@ body {
   color: #303e6f;
 }
 
-
 .basket {
   width: 34%;
   display: flex;
   height: 90px;
   gap: 40px;
+}
+
+.display-des #pr {
+  color:  #51a2f3;
 }
 
 #fashionhub {
@@ -76,6 +75,13 @@ body {
   width: 10%;
   height: 40px;
   border-radius: 50%;
+  border: none;
+}
+
+#category {
+  border: none;
+  background-color: #fbf7fa;
+  cursor: pointer;
 }
 
 #bell {
@@ -83,9 +89,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 10%;
-  height: 40px;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
+  border: none;
 }
 
 .fa-regular {
@@ -100,21 +107,25 @@ body {
 
 #bells {
   position: absolute;
-  margin-bottom: 39px;
+  margin-bottom: 20px;
   margin-right: -9px;
-  padding: 5px;
+  padding: 6.5px;
   background-color: #f2cd88;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #items-selected {
   position: absolute;
   margin-right: -9px;
-  margin-bottom: 35px;
+  margin-bottom: 43px;
+  width: 1.8rem;
+  height: 1.8rem;
   padding: 3px;
   color: #fff;
   background-color: #303e6f;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .stars{
@@ -154,6 +165,11 @@ body {
 
 #gmorning {
   color: #776e6e;
+}
+
+.contactt {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .containertwo {
@@ -299,6 +315,7 @@ input{
   background-color: #1472B2;
   color: #fff;
   text-align: center;
+  border: none;
 }
 
 .textea {
@@ -373,6 +390,24 @@ textarea{
   margin-left: 150px;
   padding-bottom: 30px;
 }
+
+.footer {
+  margin-top: 30px;
+  background-color: #f4e8f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  height: 200px;
+}
+
+#footer {
+  font-weight: 600;
+  font-size: 30px;
+  color: #303e6f;
+}
+
+
 
 
 

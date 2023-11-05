@@ -28,13 +28,11 @@
 
 .title {
   display: flex;
-  /* justify-content: center; */
   gap: 30px;
   width: 65%;
 }
 
 .navlinks {
-  /* font-family: sans-serif; */
   padding-top: 10px;
   display: flex;
   justify-content: center;
@@ -50,9 +48,9 @@
 }
 
 #fashionhub {
-  /* font-family: sans-serif; */
   font-weight: 600;
   color: #303e6f;
+  text-decoration: none;
 }
 
 #basketimg {
@@ -63,11 +61,13 @@
   width: 10%;
   height: 40px;
   border-radius: 50%;
+  border: none;
 }
 
 #category {
   border: none;
   background-color: #fbf7fa;
+  cursor: pointer;
 }
 
 #bell {
@@ -78,6 +78,7 @@
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 50%;
+  border: none;
 }
 
 .fa-regular {
@@ -92,23 +93,25 @@
 
 #bells {
   position: absolute;
-  margin-bottom: 39px;
+  margin-bottom: 42px;
   margin-right: -9px;
   padding: 6.5px;
   background-color: #f2cd88;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #items-selected {
   position: absolute;
   margin-right: -9px;
   margin-bottom: 35px;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   padding: 3px;
   color: #fff;
   background-color: #303e6f;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .stars{
@@ -150,8 +153,9 @@
   color: #776e6e;
 }
 
-.contactt {
+#contactt {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .container2 {
@@ -330,6 +334,10 @@
   background-color: #303e6f;
   border: none;
   border-radius: 40px;
+  font-size: 10px;
+  outline: 0;
+  box-shadow: 0 6px 6px #553ff040;
+  cursor: pointer;
  }
 
  #shortlist {
@@ -337,6 +345,7 @@
   color: #303e6f;
   border-radius: 40px;
   border: none;
+  font-size: 10px;
 }
 
 #number {

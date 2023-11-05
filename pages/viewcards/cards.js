@@ -1,6 +1,8 @@
 import CreateNavbar from "../../components/navbar.js"
 
 const navbar = CreateNavbar("cards")
+const cat = document.getElementById("category")
+cat.style.display ="none"
 const container = document.querySelector(".container1")
 container .innerHTML = navbar
 
@@ -20,7 +22,6 @@ function displaycardsadded (value) {
    
     <a href="./pages/details/details.html?id=${item.id}">
     <img src=${item.thumbnail} id="details-page"/>
-    <i class="fa-regular fa-heart"></i>
     </div>
     </a>
 
@@ -31,20 +32,9 @@ function displaycardsadded (value) {
    
 
     <div class="shoes-available">
-      <p id="shoes"> 5 types of shoes available</p>
-    </div>
-    <div class="stars">
-    <i class="fa-regular fa-star" id="star"></i>
-    <i class="fa-regular fa-star" id="star""></i>
-    <i class="fa-regular fa-star" id="star"></i>
-    <i class="fa-regular fa-star" id="star"></i>
+      <button id="remove">Remove from card</button>
+    </div>         
   
-      <p id="number">(121)</p>
-    </div>          
-    <div class="date">
-      <button id="addtocard">Add to Card</button>
-      <button id="shortlist">Short List</button>
-    </div>
   </div> `
   })
 

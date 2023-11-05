@@ -1,5 +1,6 @@
 import { displayallproducts, allCategories, categorydisplay, displaysingleproduct } from "./services/api.js";
 import CreateNavbar from "./components/navbar.js";
+// import { parse } from "postcss";
 
 CreateNavbar(); // create the navbar
 
@@ -100,53 +101,75 @@ buttons();
 
 // const container4 = document.querySelector('.container4')
 
- export async function displayCards(fetchData) {
- const top = document.querySelector(".containerthumb");
- if(top) top.innerHTML = "";
+export async function displayCards(fetchData) {
+  const top = document.querySelector(".containerthumb");
+  if (top) top.innerHTML = "";
+
+  // const handleAddToCart = (item) => {
+  //   console.log("hello mum", { item })
+  // }
+
+  const addEventListenersToAllAddtoCardButtons = () => {
+    const allAddToCardBtns = document.querySelectorAll(".addtocard");
+
+    allAddToCardBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const imageid = e.target.dataset.imageid;
+
+        const itemToAdd = fetchData.find((pro) => +pro.id === +imageid)
+        const addedProduts = JSON.parse(localStorage.getItem("addedcards")) || [];
+
+        addedProduts.push(itemToAdd)
+
+        console.log(itemToAdd);
+
+        localStorage.setItem("addedcards", JSON.stringify(addedProduts));
+
+        document.getElementById("items-selected").innerHTML = addedProduts.length // updating the item count
+
+        alert("added");
+
+      })
+    })
+  }
+
 
   fetchData?.forEach((item) => {
     const arrImages = item.images;
 
-    // const subcard = document.getElementById('subcards')
-    // const img = document.createElement('img')
-    // img.src = `${item.thumbnail}`
-    // subcard.appendChild(img)
+    if (top) top.innerHTML += `
+      <div class="top">
+      
+        <div class="subcard" id="subcards">
+      
+        <a href="./pages/details/details.html?id=${item.id}">
+        <img src=${item.thumbnail} id="details-page"/>
+        <i class="fa-regular fa-heart"></i>
+        </div>
+        </a>
 
+        <div class="snikersprice">
+          <span id="snykers">${item.title}</span>
+          <span id="snykers-price">$${item.price}</span>
+        </div>
+      
 
-    if(top) top.innerHTML += `<div class="top">
-    
-      <div class="subcard" id="subcards">
-     
-      <a href="./pages/details/details.html?id=${item.id}">
-      <img src=${item.thumbnail} id="details-page"/>
-      <i class="fa-regular fa-heart"></i>
+        <div class="shoes-available">
+          <p id="shoes"> 5 types of shoes available</p>
+        </div>
+        <div class="stars">
+        <span id="star" class="fa-star">${item.rating}</span>    
+          <p id="number">(121)</p>
+        </div>          
+        <div class="date">
+          <button id="addtocard" class="addtocard" data-imageid=${item.id}>Add to Card</button>
+          <button id="shortlist">Short List</button>
+        </div>
       </div>
-      </a>
-
-      <div class="snikersprice">
-        <span id="snykers">${item.title}</span>
-        <span id="snykers-price">$${item.price}</span>
-      </div>
-     
-
-      <div class="shoes-available">
-        <p id="shoes"> 5 types of shoes available</p>
-      </div>
-      <div class="stars">
-      <i class="fa-regular fa-star" id="star"></i>
-      <i class="fa-regular fa-star" id="star""></i>
-      <i class="fa-regular fa-star" id="star"></i>
-      <i class="fa-regular fa-star" id="star"></i>
-    
-        <p id="number">(121)</p>
-      </div>          
-      <div class="date">
-        <button id="addtocard">Add to Card</button>
-        <button id="shortlist">Short List</button>
-      </div>
-    </div> 
-  `
+    `
   });
+
+  addEventListenersToAllAddtoCardButtons();
 }
 
 
@@ -180,11 +203,6 @@ export function footer() {
   <h2 id="footer">Footer</h2>
 </div>`;
 }
-
 footer();
 
-// const subcard =document.querySelector('.subcard')
 document.querySelector("#app").innerHTML;
-
-
-// setupCounter(document.querySelector('#counter'))

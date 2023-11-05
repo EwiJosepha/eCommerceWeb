@@ -4,7 +4,9 @@ const youremail = document.getElementById("youremail")
 const yournumber = document.getElementById("yournumber")
 const brand = document.getElementById("brand")
 CreateNavbar("contact");
-
+// footer("contact")
+// const footer = document.querySelector(".footer")
+// footer.innerHTML =footer()
 
 // const dat = document.getElementById('dat')
 // function tail () {

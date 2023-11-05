@@ -10,16 +10,13 @@ export default function CreateNavbar(current_page = "main") {
     base_url = "../"
   }
 
+  const itemcount = (JSON.parse(localStorage.getItem("addedcards")) || []).length
+
+
   return container1.innerHTML = ` <div class="title">
-  <h1 id="fashionhub"><i>FashionHub</i></h1>
+  <a href="/index.html"><h1 id="fashionhub"><i>FashionHub</i></h1></a>
   <div class="navlinks">
-    <span><select id="category">
-    <option>shoes</option>
-    <option>bags</option>
-    <option>hats</option>
-
-
-    </select></span>
+    <span><select id="category"></select></span>
     <span id="brand">Brand</span>
    <a href="${base_url}contact/contact.html" id="contactdisplay"><span class="contactt">Contact</span><a/>
     <span id="faq">FAQ's</span>
@@ -28,7 +25,7 @@ export default function CreateNavbar(current_page = "main") {
 
 <div class="basket">
   <button id="basketimg">
-    <span id="items-selected">3</span>
+    <span id="items-selected">${itemcount}</span>
    <a href="http:${base_url}viewcards/cards.html"> <i class="fa-solid fa-bag-shopping" id="navto-nextp"></i></a>
   </button>
   <button id="bell">
@@ -47,35 +44,3 @@ export default function CreateNavbar(current_page = "main") {
 `;
 
 }
-
-
-// const getJson = await allCategories();
-// let category = document.getElementById("category");
-// category.innerHTML = getJson.map(
-//   (item) => `
-//  <option id="category">${item}</option>`
-// );
-
-// let selectedCategory = "";
-
-// category.addEventListener("input", async (e) => {
-//   category = e.target.value;
-//   selectedCategory = category;
-//   const res = await categorydisplay(category);
-
-//   productrender = res?.products;
-
-//   console.log({ category, productrender, res });
-
-//   displayCards(productrender);
-//   // top.style.display = "none"
-//   console.log(selectedCategory);
-
-//   return selectedCategory;
-// });
-
-// if (selectedCategory !== "") {
-//   productrender = productrender.filter(
-//     (item) => item.category === selectedCategory
-//   );
-// }
