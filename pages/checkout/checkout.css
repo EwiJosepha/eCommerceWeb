@@ -134,6 +134,10 @@ a {
   justify-content: center;
 }
 
+.row {
+  padding-top: 30px;
+}
+
 .title-image {
   display: flex;
   width: 26%;
@@ -179,7 +183,7 @@ label {
 }
 
 /* Style the submit button */
-input[type=submit] {
+#payment {
   background-color: #04AA6D;
   color: white;
   padding: 12px 20px;
@@ -208,6 +212,15 @@ input[type=submit] {
   float: left;
   width: 75%;
   margin-top: 6px;
+}
+
+.col-7 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  gap: 9rem;
 }
 
 /* Clear floats after the columns */

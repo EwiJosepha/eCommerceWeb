@@ -8,7 +8,8 @@ import CreateNavbar from "../../components/navbar.js"
 // let singleproduc = await displaysingleproduct(id)
 // console.log(singleproduc);
 
-const removebtn = document.getElementById("remove")
+
+
 
 const navbar = CreateNavbar("cards")
 const cat = document.getElementById("category")
@@ -42,16 +43,29 @@ function displaycardsadded (value) {
    
 
     <div class="shoes-available">
-     <button id="remove" data-btns>Remove from card</button>
+     <button id="remove" class="allbtns" data-btns="was" >Remove from card</button>
     </div>         
   
   </div> `
   })
 
+
 }
 
-displaycardsadded (addedcards )
+displaycardsadded (addedcards)
 
+
+const removebtn = document.querySelector(".allbtns")
+console.log(removebtn);
 removebtn.addEventListener("click", ()=>{
-
+  console.log("hello");
 })
+
+
+
+
+
+
+
+
+

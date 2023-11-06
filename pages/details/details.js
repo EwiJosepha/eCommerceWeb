@@ -4,12 +4,6 @@ import { displayCards, footer } from "../../main.js";
 import { displayallproductsdata } from "../../services/api.js";
 
 const gallery = document.querySelector(".gal");
-const fashionhub = document.getElementById('fashionhub')
-const a = document.createElement('a')
-a.href = "../5501"
-a.appendChild(fashionhub)
-console.log(a);
-
 CreateNavbar("details");
 const itemselectedbasket = document.getElementById("items-selected");
 
