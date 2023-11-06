@@ -15,7 +15,11 @@
   font-family: 'inter', sans-serif;
 }
 
-a {
+#atag {
+  text-decoration: none;
+}
+
+#contactdisplay {
   text-decoration: none;
 }
 

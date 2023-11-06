@@ -14,11 +14,11 @@ export default function CreateNavbar(current_page = "main") {
 
 
   return container1.innerHTML = ` <div class="title">
-  <a href="/index.html"><h1 id="fashionhub"><i>FashionHub</i></h1></a>
+  <a href="/index.html" id="atag"><h1 id="fashionhub"><i>FashionHub</i></h1></a>
   <div class="navlinks">
     <span><select id="category"></select></span>
     <span id="brand">Brand</span>
-   <a href="${base_url}contact/contact.html" id="contactdisplay"><span class="contactt">Contact</span><a/>
+   <a href="${base_url }contact/contact.html" id="contactdisplay"><span class="contactt">Contact</span><a/>
     <span id="faq">FAQ's</span>
   </div>
 </div>

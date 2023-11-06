@@ -229,7 +229,7 @@ let semi = singleproduc;
     console.log(arProds);
 const arrimg = semii.images
     console.log(arrimg);
-    arrimg.forEach((item)=>{
+   
       
  
 
@@ -239,7 +239,7 @@ const arrimg = semii.images
     
    
     <a href="./pages/details/details.html?id=${semii.id}">
-    <img src=${item} id="detailss-page"/>
+    <img src=${semii.thumbnail} id="detailss-page"/>
     </div>
     </a>
 
@@ -264,7 +264,7 @@ const arrimg = semii.images
 `;
 
 })
-  });
+ 
 
 let indexxx = 0
 let interval = setInterval(run, 2000)

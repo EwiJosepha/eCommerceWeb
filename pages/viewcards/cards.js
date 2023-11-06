@@ -1,5 +1,5 @@
 import CreateNavbar from "../../components/navbar.js"
-import { similaprod } from "../details/details.js"
+// import { similaprod } from "../details/details.js"
 // import displaysingleproduct from "../../services/api.js"
 
 // let params = new URLSearchParams(document.location.search);
@@ -7,6 +7,8 @@ import { similaprod } from "../details/details.js"
 // console.log(id); //
 // let singleproduc = await displaysingleproduct(id)
 // console.log(singleproduc);
+
+const removebtn = document.getElementById("remove")
 
 const navbar = CreateNavbar("cards")
 const cat = document.getElementById("category")
@@ -40,7 +42,7 @@ function displaycardsadded (value) {
    
 
     <div class="shoes-available">
-      <button id="remove">Remove from card</button>
+     <button id="remove" data-btns>Remove from card</button>
     </div>         
   
   </div> `
@@ -49,3 +51,7 @@ function displaycardsadded (value) {
 }
 
 displaycardsadded (addedcards )
+
+removebtn.addEventListener("click", ()=>{
+
+})

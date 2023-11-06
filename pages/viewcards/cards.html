@@ -24,12 +24,33 @@
     <div class="containerthird">
       <h1 id="txtcenter">Products as added to Card Chronologically</h1>
     </div>
-    <div class="container2"></div>
+    <div class="container2">
+      <div class="top">
+  
+        <div class="subcard" id="subcards">
+       
+        <a href="./pages/details/details.html?id=${item.id}">
+        <img src=${item.thumbnail} id="details-page"/>
+        </div>
+        </a>
+    
+        <div class="snikersprice">
+          <span id="snykers">${item.title}</span>
+          <span id="snykers-price">$${item.price}</span>
+        </div>
+       
+    
+        <div class="shoes-available">
+          <button id="remove">Remove from card</button>
+        </div>         
+      
+      </div>
+    </div>
     <br>
     <hr>
     <div class="container4">
       <div class="checkout">
-        <button id="checkout">Checkout</button>
+        <a href="../checkout/checkout.html"><button id="checkout">Checkout</button></a>
       </div>
     </div>
     <div class="footer">
