@@ -41,16 +41,15 @@ export async function displayCardss(singleItem) {
   console.log(singlimgs);
 
   // const arrImages = singleItem.thumbnail;
-  top.innerHTML += 
-  singlimgs.forEach((item)=>{
+  if(singlimgs)singlimgs.forEach((item)=>{
+    console.log(item);
+    top.innerHTML += 
     `<div class="top">
   
     
     <div class="subcard" id="subcards">
-    <img src="${item.thumbnail}" id="details-page"/>
-
    
-    <img src="${item.singlimgs}" id="details-page"/>
+    <img src="${item}" id="details-page"/>
    
 
   
@@ -60,9 +59,6 @@ export async function displayCardss(singleItem) {
   })
 
     
-
-  
-
   let indexxx = 0
 let interval = setInterval(run, 2000)
 
@@ -220,19 +216,30 @@ export function productmoredetaills() {
 productmoredetaills();
 
 let semi = singleproduc;
-async function similaprod(arProds) {
+ export async function similaprod(arProds) {
   const similarproducts = document.querySelector(".containersecond");
   console.log(similarproducts);
   console.log(similarities);
+  // const arrim = arProds
+  // console.log(arrim);
+
+  // console.log(arProds);
 
   arProds.forEach((semii) => {
+    console.log(arProds);
+const arrimg = semii.images
+    console.log(arrimg);
+    arrimg.forEach((item)=>{
+      
+ 
+
     similarproducts.innerHTML += `<div class="topp">
   
     <div class="subcardd" id="subcardss">
     
    
     <a href="./pages/details/details.html?id=${semii.id}">
-    <img src=${semii.thumbnail} id="detailss-page"/>
+    <img src=${item} id="detailss-page"/>
     </div>
     </a>
 
@@ -246,8 +253,7 @@ async function similaprod(arProds) {
       <p id="shoes"> 5 types of shoes available</p>
     </div>
     <div class="stars">
-    <span id="star" class="fa-star">${semii.rating
-      }</span>
+    <span id="star" class="fa-star">${semii.rating}</span>
     </div>          
     <div class="date">
       <button id="addtocard">Add to Card</button>
@@ -256,9 +262,10 @@ async function similaprod(arProds) {
     <div class="subcardd" id="subcardss">
   </div> 
 `;
+
+})
   });
 
-// console.log(immg)
 let indexxx = 0
 let interval = setInterval(run, 2000)
 

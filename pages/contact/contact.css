@@ -21,6 +21,10 @@ body {
   border: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container1 {
   width: 100%;
   display: flex;

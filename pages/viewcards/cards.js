@@ -1,4 +1,12 @@
 import CreateNavbar from "../../components/navbar.js"
+import { similaprod } from "../details/details.js"
+// import displaysingleproduct from "../../services/api.js"
+
+// let params = new URLSearchParams(document.location.search);
+// let id = params.get("id"); // is the string "Jonathan"
+// console.log(id); //
+// let singleproduc = await displaysingleproduct(id)
+// console.log(singleproduc);
 
 const navbar = CreateNavbar("cards")
 const cat = document.getElementById("category")

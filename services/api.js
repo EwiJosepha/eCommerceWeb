@@ -10,7 +10,7 @@ export async function allCategories() {
 
 //add functionality to category to display images on the landing page
 
-export async function categorydisplay (category) {
+export  async function categorydisplay (category) {
   const eachcategory = `https://dummyjson.com/products/category/${category}`
   const fetchdata = await fetch(eachcategory)
   const jasondata = await fetchdata.json()
@@ -19,7 +19,7 @@ export async function categorydisplay (category) {
   // https://dummyjson.com/products/category/smartphones
 }
 
-export async function displayallproducts () {
+export  async function displayallproducts () {
   const products = "https://dummyjson.com/products?limit=0&skip=0"
   const productdata = await fetch(products)
   const data = await productdata.json()
@@ -31,7 +31,7 @@ export async function displayallproducts () {
   // const targetProduct = data.products
 }
 
-export async function displayallproductsdata () {
+export  async function displayallproductsdata () {
   const products = "https://dummyjson.com/products?limit=0&skip=0"
   const productdata = await fetch(products)
   const data = await productdata.json()
@@ -43,7 +43,7 @@ export async function displayallproductsdata () {
   // const targetProduct = data.products
 }
 
-export async function displaysingleproduct (singlepro) {
+export  async function displaysingleproduct (singlepro) {
   const singleprod = `https://dummyjson.com/products/${singlepro}`
   const singledata = await fetch(singleprod);
   const dataaa = await singledata.json();
