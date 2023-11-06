@@ -1,10 +1,11 @@
-import { displayallproducts, allCategories, categorydisplay, displaysingleproduct } from "./services/api.js";
+import { displayallproducts, allCategories, categorydisplay, displaysingleproduct,displaybtnone } from "./services/api.js";
 import CreateNavbar from "./components/navbar.js";
 // import { parse } from "postcss";
 
 CreateNavbar(); // create the navbar
 
 const getJson = await allCategories();
+
 
 let productrender = [];
 
@@ -100,9 +101,8 @@ buttons();
 
 
 // const container4 = document.querySelector('.container4')
-
+const top = document.querySelector(".containerthumb");
 export async function displayCards(fetchData) {
-  const top = document.querySelector(".containerthumb");
   if (top) top.innerHTML = "";
 
   // const handleAddToCart = (item) => {
@@ -181,8 +181,8 @@ export function previews() {
 
   if (container5) container5.innerHTML = `<div class="previews">
   <button id="previews">Preview</button>
-  <button id="previews">1</button>
-  <button id="previews">2</button>
+  <button id="previews" class="btnone">1</button>
+  <button id="previews" class="btntwo">2</button>
   <button id="previews">3</button>
   <button id="previews">4</button>
   <button id="previews">5</button>
@@ -193,6 +193,92 @@ export function previews() {
 }
 
 previews();
+
+
+const prevone = document.querySelector(".btnone")
+const btntwo = document.querySelector(".btntwo")
+let ress
+const oneprod =await displaybtnone ().then((res)=>{
+   ress = res
+  console.log(ress);
+})
+
+if(prevone)prevone.addEventListener("click",async ()=>{
+
+top.innerHTML= "";
+  ress.forEach((item)=>{
+    console.log(ress);
+    if(top)top.innerHTML += 
+    `<div class="top">
+    <div class="subcard" id="subcards">
+   <a href="./pages/details/details.html?id=${item.id}">
+    <img src=${item.thumbnail} id="details-page"/>
+    <i class="fa-regular fa-heart"></i>
+    </div>
+    </a>
+
+    <div class="snikersprice">
+      <span id="snykers">${item.title}</span>
+      <span id="snykers-price">$${item.price}</span>
+    </div>
+  
+
+    <div class="shoes-available">
+      <p id="shoes"> 5 types of shoes available</p>
+    </div>
+    <div class="stars">
+    <span id="star" class="fa-star">${item.rating}</span>    
+      <p id="number">(121)</p>
+    </div>          
+    <div class="date">
+      <button id="addtocard" class="addtocard" data-imageid=${item.id}>Add to Card</button>
+      <button id="shortlist">Short List</button>
+    </div>
+  </div>`
+  })
+ 
+})
+let restwo
+const secondprod =await displaybtnone ().then((res)=>{
+   restwo = res
+  console.log(ress);
+})
+
+if(btntwo)btntwo.addEventListener("click",async ()=>{
+
+top.innerHTML= "";
+  restwo.forEach((item)=>{
+    console.log(restwo);
+    if(top)top.innerHTML += 
+    `<div class="top">
+    <div class="subcard" id="subcards">
+   <a href="./pages/details/details.html?id=${item.id}">
+    <img src=${item.thumbnail} id="details-page"/>
+    <i class="fa-regular fa-heart"></i>
+    </div>
+    </a>
+
+    <div class="snikersprice">
+      <span id="snykers">${item.title}</span>
+      <span id="snykers-price">$${item.price}</span>
+    </div>
+  
+
+    <div class="shoes-available">
+      <p id="shoes"> 5 types of shoes available</p>
+    </div>
+    <div class="stars">
+    <span id="star" class="fa-star">${item.rating}</span>    
+      <p id="number">(121)</p>
+    </div>          
+    <div class="date">
+      <button id="addtocard" class="addtocard" data-imageid=${item.id}>Add to Card</button>
+      <button id="shortlist">Short List</button>
+    </div>
+  </div>`
+  })
+ 
+})
 
 
 

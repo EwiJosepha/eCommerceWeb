@@ -55,11 +55,13 @@ function displaycardsadded (value) {
 displaycardsadded (addedcards)
 
 
-const removebtn = document.querySelector(".allbtns")
-console.log(removebtn);
-removebtn.addEventListener("click", ()=>{
-  console.log("hello");
-})
+// const removebtn = document.querySelectorAll(".shoes-available .allbtns")
+// removebtn.forEach((btn)=>{
+//   btn.
+// })
+
+
+
 
 
 

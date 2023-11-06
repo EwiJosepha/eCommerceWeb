@@ -31,6 +31,29 @@ export  async function displayallproducts () {
   // const targetProduct = data.products
 }
 
+export  async function displaybtnone () {
+  const products = "https://dummyjson.com/products?limit=10&skip=10"
+  const productdata = await fetch(products)
+  const data = await productdata.json()
+  console.log(data);
+  const targetdata = data.products
+  console.log( targetdata);
+
+  return  targetdata
+  // const targetProduct = data.products
+}
+export  async function displaybtntwo () {
+  const products = "https://dummyjson.com/products?limit=40&skip=10"
+  const productdata = await fetch(products)
+  const data = await productdata.json()
+  console.log(data);
+  const targetdata = data.products
+  console.log( targetdata);
+
+  return  targetdata
+  // const targetProduct = data.products
+}
+
 export  async function displayallproductsdata () {
   const products = "https://dummyjson.com/products?limit=0&skip=0"
   const productdata = await fetch(products)
