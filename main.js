@@ -1,4 +1,4 @@
-import { displayallproducts, allCategories, categorydisplay, displaysingleproduct,displaybtnone } from "./services/api.js";
+import { displayallproducts, allCategories, categorydisplay, displaysingleproduct,displaybtnone, displaybtntwo } from "./services/api.js";
 import CreateNavbar from "./components/navbar.js";
 // import { parse } from "postcss";
 
@@ -239,8 +239,11 @@ top.innerHTML= "";
  
 })
 let restwo
-const secondprod =await displaybtnone ().then((res)=>{
+const secondprod =await displaybtntwo().then((res)=>{
    restwo = res
+   restwo.filter((item)=>{
+    item.id < 10 
+   })
   console.log(ress);
 })
 

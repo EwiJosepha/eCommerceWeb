@@ -43,7 +43,7 @@ export  async function displaybtnone () {
   // const targetProduct = data.products
 }
 export  async function displaybtntwo () {
-  const products = "https://dummyjson.com/products?limit=40&skip=10"
+  const products = "https://dummyjson.com/products?limit=20&skip=10"
   const productdata = await fetch(products)
   const data = await productdata.json()
   console.log(data);
