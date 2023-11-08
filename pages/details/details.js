@@ -53,30 +53,30 @@ export async function displayCardss(singleItem) {
   })
 
     
-  let indexxx = 0
-let interval = setInterval(run, 2000)
+//   let indexxx = 0
+// let interval = setInterval(run, 2000)
 
-function run () {
-  indexxx++
-  changee()
-}
+// function run () {
+//   indexxx++
+//   changee()
+// }
 
-function changee () {
-  if (indexxx > similarities.length - 1) {
-    indexxx = 0
-  } else if (indexxx < 0) {
-    indexxx = immg.length - 1
-    console.log(changee)
-  }
+// function changee () {
+//   if (indexxx > similarities.length - 1) {
+//     indexxx = 0
+//   } else if (indexxx < 0) {
+//     indexxx = immg.length - 1
+//     console.log(changee)
+//   }
 
-  top.style.transform = `translateX(${-indexxx * 500}px)`
-}
+//   top.style.transform = `translateX(${-indexxx * 500}px)`
+// }
 
-function resetInterval () {
-  clearInterval(interval)
-  interval = setInterval(run, 1000)
-}
-resetInterval ()
+// function resetInterval () {
+//   clearInterval(interval)
+//   interval = setInterval(run, 1000)
+// }
+// resetInterval ()
 
 }
 

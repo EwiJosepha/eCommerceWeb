@@ -19,7 +19,7 @@ container .innerHTML = navbar
 
 const container2 = document.querySelector(".container2")
 
-const addedcards = JSON.parse(localStorage.getItem('addedcards'))
+let addedcards = JSON.parse(localStorage.getItem('addedcards'))
 
 function displaycardsadded (value) {
   if(container2) container2.innerHTML = ""
@@ -54,11 +54,16 @@ function displaycardsadded (value) {
 
 displaycardsadded (addedcards)
 
-
-// const removebtn = document.querySelectorAll(".shoes-available .allbtns")
-// removebtn.forEach((btn)=>{
-//   btn.
-// })
+const removebtn = document.querySelectorAll(".shoes-available .allbtns")
+removebtn.forEach((btn)=>{
+  btn.addEventListener("click", ()=>{
+    console.log("name");
+    addedcards.filter((item)=>{
+      item !== btn 
+    })
+ 
+  })
+})
 
 
 

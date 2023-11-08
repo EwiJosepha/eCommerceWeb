@@ -1,3 +1,6 @@
+import {
+  MAX_ITEMS_PER_PAGE
+} from "./constants.js";
 
 export async function allCategories() {
   const allcategories = "https://dummyjson.com/products/categories"
@@ -42,17 +45,15 @@ export  async function displaybtnone () {
   return  targetdata
   // const targetProduct = data.products
 }
-export  async function displaybtntwo () {
-  const products = "https://dummyjson.com/products?limit=20&skip=10"
+export  async function displayPageData (page=0) {
+  const products = `https://dummyjson.com/products?limit=${MAX_ITEMS_PER_PAGE}&skip=${page *MAX_ITEMS_PER_PAGE}`
   const productdata = await fetch(products)
   const data = await productdata.json()
   console.log(data);
-  const targetdata = data.products
-  console.log( targetdata);
 
-  return  targetdata
-  // const targetProduct = data.products
+  return  data;
 }
+
 
 export  async function displayallproductsdata () {
   const products = "https://dummyjson.com/products?limit=0&skip=0"

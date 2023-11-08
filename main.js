@@ -1,6 +1,14 @@
-import { displayallproducts, allCategories, categorydisplay, displaysingleproduct,displaybtnone, displaybtntwo } from "./services/api.js";
+import {
+  allCategories,
+  categorydisplay,
+  displayPageData
+} from "./services/api.js";
+
+import {
+  MAX_ITEMS_PER_PAGE
+} from "./services/constants.js"
+
 import CreateNavbar from "./components/navbar.js";
-// import { parse } from "postcss";
 
 CreateNavbar(); // create the navbar
 
@@ -9,12 +17,54 @@ const getJson = await allCategories();
 
 let productrender = [];
 
-displayallproducts()
-  .then((res) => {
-    productrender = res;
-    displayCards(productrender);
-  })
-  .catch((err) => console.error(err));
+export function displayPaginationBtns(paginationCount) {
+  const addEventListenersToAllPaginationBtns = () => {
+    const allPageBtn = document.querySelectorAll(".pageBtn");
+    
+    allPageBtn.forEach((btn, i) => btn.onclick = () => {
+      console.log("i got clicked", i);
+      loadPageData(i);
+    });
+  }
+
+  const container5 = document.querySelector(".container5");
+  container5.innerHTML = "";
+
+  const previews = document.createElement("div");
+  previews.className = "previews";
+  previews.innerHTML = `<button id="previews">Previous</button>`
+
+  for (let i = 0; i < paginationCount; i++) {
+    const pageBtn = document.createElement("button");
+
+    pageBtn.id = "previews";
+    pageBtn.className = "pageBtn";
+
+    pageBtn.innerHTML = i + 1; // not to start from zero;
+
+    console.log({ pageBtn });
+    previews.appendChild(pageBtn);
+  }
+
+  previews.innerHTML += `<button id="previews">Next</button>`;
+
+  container5.appendChild(previews);
+
+  addEventListenersToAllPaginationBtns()
+}
+
+const loadPageData = (pageIndx) => {
+  displayPageData(pageIndx)
+    .then((res) => {
+      productrender = res.products;
+      const paginationCount = Math.ceil(res.total / MAX_ITEMS_PER_PAGE);
+      displayCards(productrender);
+      displayPaginationBtns(paginationCount);
+    })
+    .catch((err) => console.error(err));
+}
+
+loadPageData(0);
 
 console.log("Json Data", getJson);
 
@@ -105,10 +155,6 @@ const top = document.querySelector(".containerthumb");
 export async function displayCards(fetchData) {
   if (top) top.innerHTML = "";
 
-  // const handleAddToCart = (item) => {
-  //   console.log("hello mum", { item })
-  // }
-
   const addEventListenersToAllAddtoCardButtons = () => {
     const allAddToCardBtns = document.querySelectorAll(".addtocard");
 
@@ -171,119 +217,6 @@ export async function displayCards(fetchData) {
 
   addEventListenersToAllAddtoCardButtons();
 }
-
-
-
-
-
-export function previews() {
-  const container5 = document.querySelector(".container5");
-
-  if (container5) container5.innerHTML = `<div class="previews">
-  <button id="previews">Preview</button>
-  <button id="previews" class="btnone">1</button>
-  <button id="previews" class="btntwo">2</button>
-  <button id="previews">3</button>
-  <button id="previews">4</button>
-  <button id="previews">5</button>
-  <button id="previews">6</button>
-  <button id="previews">7</button>
-  <button id="previews">Next</button>
-</div>`;
-}
-
-previews();
-
-
-const prevone = document.querySelector(".btnone")
-const btntwo = document.querySelector(".btntwo")
-let ress
-const oneprod =await displaybtnone ().then((res)=>{
-   ress = res
-  console.log(ress);
-})
-
-if(prevone)prevone.addEventListener("click",async ()=>{
-
-top.innerHTML= "";
-  ress.forEach((item)=>{
-    console.log(ress);
-    if(top)top.innerHTML += 
-    `<div class="top">
-    <div class="subcard" id="subcards">
-   <a href="./pages/details/details.html?id=${item.id}">
-    <img src=${item.thumbnail} id="details-page"/>
-    <i class="fa-regular fa-heart"></i>
-    </div>
-    </a>
-
-    <div class="snikersprice">
-      <span id="snykers">${item.title}</span>
-      <span id="snykers-price">$${item.price}</span>
-    </div>
-  
-
-    <div class="shoes-available">
-      <p id="shoes"> 5 types of shoes available</p>
-    </div>
-    <div class="stars">
-    <span id="star" class="fa-star">${item.rating}</span>    
-      <p id="number">(121)</p>
-    </div>          
-    <div class="date">
-      <button id="addtocard" class="addtocard" data-imageid=${item.id}>Add to Card</button>
-      <button id="shortlist">Short List</button>
-    </div>
-  </div>`
-  })
- 
-})
-let restwo
-const secondprod =await displaybtntwo().then((res)=>{
-   restwo = res
-   restwo.filter((item)=>{
-    item.id < 10 
-   })
-  console.log(ress);
-})
-
-if(btntwo)btntwo.addEventListener("click",async ()=>{
-
-top.innerHTML= "";
-  restwo.forEach((item)=>{
-    console.log(restwo);
-    if(top)top.innerHTML += 
-    `<div class="top">
-    <div class="subcard" id="subcards">
-   <a href="./pages/details/details.html?id=${item.id}">
-    <img src=${item.thumbnail} id="details-page"/>
-    <i class="fa-regular fa-heart"></i>
-    </div>
-    </a>
-
-    <div class="snikersprice">
-      <span id="snykers">${item.title}</span>
-      <span id="snykers-price">$${item.price}</span>
-    </div>
-  
-
-    <div class="shoes-available">
-      <p id="shoes"> 5 types of shoes available</p>
-    </div>
-    <div class="stars">
-    <span id="star" class="fa-star">${item.rating}</span>    
-      <p id="number">(121)</p>
-    </div>          
-    <div class="date">
-      <button id="addtocard" class="addtocard" data-imageid=${item.id}>Add to Card</button>
-      <button id="shortlist">Short List</button>
-    </div>
-  </div>`
-  })
- 
-})
-
-
 
 export function footer() {
   const container6 = document.querySelector(".container6");
