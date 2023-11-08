@@ -173,7 +173,7 @@ export async function displayCards(fetchData) {
 
         document.getElementById("items-selected").innerHTML = addedProduts.length // updating the item count
 
-        alert("added");
+        alert("add to card");
 
       })
     })
